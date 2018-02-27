@@ -1,15 +1,13 @@
-= Docker wildfly container
-:toc:
+# Docker wildfly container
 
-== Overview
+A Wildfly docker container with the Keycloak adapter installed to deploy 
+your apps using KEYCLOAK login method like below:
 
-A wildfly docker contiainer with the keycloak adapter intalled to deploy your apps
-using KEYCLOAK login method like below:
-
-[source, xml]
+```xml
 <auth-method>KEYCLOAK</auth-method>
+```
 
-== Dockerfile
+## Dockerfile
 
 Dockerfile should looks like below example.
 
