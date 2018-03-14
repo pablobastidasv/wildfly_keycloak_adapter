@@ -12,8 +12,8 @@ your apps using KEYCLOAK login method like below:
 Dockerfile should looks like below example.
 
 ```Dockerfile
-FROM pablobastidasv/wildfly_keycloak:latest
-COPY ./target/restaurants.war ${DEPLOYMENT_DIR}
+FROM pablobastidasv/wildfly_keycloak_adapter
+COPY ./target/micro.war ${DEPLOYMENT_DIR}
 ```
 
 The `.war` file is a standard JEE artifact.
