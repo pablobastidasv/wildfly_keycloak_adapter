@@ -1,0 +1,14 @@
+embed-server --server-config=standalone.xml
+
+if (result != keycloak) of /subsystem=ejb3:read-attribute(name=default-security-domain)
+    /subsystem=ejb3:write-attribute(name=default-security-domain, value=keycloak)
+else
+    echo Keycloak already is the EJB3 default security domain.
+end-if
+
+if (result != keycloak) of /subsystem=undertow:read-attribute(name=default-security-domain)
+    /subsystem=undertow:write-attribute(name=default-security-domain, value=keycloak)
+else
+    echo Keycloak already is the Undertow(web) default security domain.
+end-if
+
