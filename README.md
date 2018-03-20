@@ -7,6 +7,14 @@ your apps using KEYCLOAK login method like below:
 <auth-method>KEYCLOAK</auth-method>
 ```
 
+## Building image
+
+Run the below bash command
+
+```bash
+docker image build -t pablobastidasv/wildfly_keycloak_adapter .
+```
+
 ## Dockerfile
 
 Dockerfile should looks like below example.
